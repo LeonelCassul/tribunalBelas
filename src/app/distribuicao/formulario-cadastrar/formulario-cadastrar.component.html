@@ -1,1 +1,30 @@
-<p>formulario-cadastrar works!</p>
+<table mat-table [dataSource]="listaProcesso" class="mat-elevation-z8">
+
+ 
+       <!-- Nª Processo Column -->
+    <ng-container matColumnDef="nProcesso">
+      <th mat-header-cell *matHeaderCellDef> No.Processo </th>
+   .  <td mat-cell *matCellDef="let processo"> {{processo.nProcesso}} </td>
+    </ng-container>
+
+   <!-- Arguido Column -->
+    <ng-container matColumnDef="arguido">
+      <th mat-header-cell *matHeaderCellDef> Arguido(a)</th>
+      <td mat-cell *matCellDef="let processo"> {{processo.arguido}} </td>
+    </ng-container>
+
+    <!-- Secção ¨Column -->
+    <ng-container matColumnDef="seccao">
+      <th mat-header-cell *matHeaderCellDef> Secção </th>
+      <td mat-cell *matCellDef="let processo"> {{processo.seccao}} </td>
+    </ng-container>
+
+    <!-- Juiz Column -->
+    <ng-container matColumnDef="juiz">
+      <th mat-header-cell *matHeaderCellDef> Juiz(a) </th>
+      <td mat-cell *matCellDef="let processo"> {{processo.juiz}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

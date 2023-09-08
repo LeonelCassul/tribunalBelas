@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DistribuicaoRoutingModule } from './distribuicao-routing.module';
 import { FormularioCadastrarComponent } from './formulario-cadastrar/formulario-cadastrar.component';
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { FormularioCadastrarComponent } from './formulario-cadastrar/formulario-
   ],
   imports: [
     CommonModule,
-    DistribuicaoRoutingModule
+    DistribuicaoRoutingModule,
+    AppMaterialModule
   ]
 })
 export class DistribuicaoModule { }
