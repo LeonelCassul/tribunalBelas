@@ -1,30 +1,43 @@
-<table mat-table [dataSource]="listaProcesso" class="mat-elevation-z8">
+<mat-card>
+  <mat-toolbar color="primary">
+    <span>Processo Registado</span>
+  </mat-toolbar>
 
- 
-       <!-- Nª Processo Column -->
-    <ng-container matColumnDef="nProcesso">
-      <th mat-header-cell *matHeaderCellDef> No.Processo </th>
-   .  <td mat-cell *matCellDef="let processo"> {{processo.nProcesso}} </td>
-    </ng-container>
+  <table mat-table [dataSource]="listaProcesso" class="mat-elevation-z8">
+    <!-- Nª Processo Column -->
+ <ng-container matColumnDef="nProcesso">
+   <th mat-header-cell *matHeaderCellDef> No.Processo </th>
+.  <td mat-cell *matCellDef="let processo"> {{processo.nProcesso}} </td>
+ </ng-container>
 
-   <!-- Arguido Column -->
-    <ng-container matColumnDef="arguido">
-      <th mat-header-cell *matHeaderCellDef> Arguido(a)</th>
-      <td mat-cell *matCellDef="let processo"> {{processo.arguido}} </td>
-    </ng-container>
+<!-- Arguido Column -->
+ <ng-container matColumnDef="arguido">
+   <th mat-header-cell *matHeaderCellDef> Arguido(a)</th>
+   <td mat-cell *matCellDef="let processo"> {{processo.arguido}} </td>
+ </ng-container>
 
-    <!-- Secção ¨Column -->
-    <ng-container matColumnDef="seccao">
-      <th mat-header-cell *matHeaderCellDef> Secção </th>
-      <td mat-cell *matCellDef="let processo"> {{processo.seccao}} </td>
-    </ng-container>
+ <!-- Secção ¨Column -->
+ <ng-container matColumnDef="seccao">
+   <th mat-header-cell *matHeaderCellDef> Secção </th>
+   <td mat-cell *matCellDef="let processo"> {{processo.seccao}} </td>
+ </ng-container>
 
-    <!-- Juiz Column -->
-    <ng-container matColumnDef="juiz">
-      <th mat-header-cell *matHeaderCellDef> Juiz(a) </th>
-      <td mat-cell *matCellDef="let processo"> {{processo.juiz}} </td>
-    </ng-container>
+ <!-- Juiz Column -->
+ <ng-container matColumnDef="juiz">
+   <th mat-header-cell *matHeaderCellDef> Juiz(a) </th>
+   <td mat-cell *matCellDef="let processo"> {{processo.juiz}} </td>
+ </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <!-- data Column -->
+ <ng-container matColumnDef="data">
+   <th mat-header-cell *matHeaderCellDef> Data</th>
+   <td mat-cell *matCellDef="let processo"> {{processo.data}} </td>
+ </ng-container>
+
+ <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+ <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+
+
+</mat-card>
