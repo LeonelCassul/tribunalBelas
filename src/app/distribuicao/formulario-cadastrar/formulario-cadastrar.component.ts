@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListaProcesso } from '../model/lista-processo';
 import { ServicoListarProcessoService } from '../services/servico-listar-processo.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-formulario-cadastrar',
@@ -9,16 +10,17 @@ import { ServicoListarProcessoService } from '../services/servico-listar-process
 })
 export class FormularioCadastrarComponent implements OnInit {
 
-   listaProcesso : ListaProcesso[] = [];
+   listaProcesso$ : Observable<ListaProcesso[]>;
    displayedColumns =  ['nProcesso','arguido','seccao','juiz','data'];
 
 
   constructor(private servicoListarProcessoService : ServicoListarProcessoService) {
     //this.listaProcesso = [];
+      this.listaProcesso$ = this.servicoListarProcessoService.listar().pipe(
+        catchError()
+      );
   }
 
-  ngOnInit(): void {
-    this.listaProcesso = this.servicoListarProcessoService.lista();
-  }
+  ngOnInit(): void {}
 
 }
