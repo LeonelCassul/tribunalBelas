@@ -1,0 +1,17 @@
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+@Component({
+  selector: 'app-erros',
+  templateUrl: './erros.component.html',
+  styleUrls: ['./erros.component.scss']
+})
+export class ErrosComponent implements OnInit {
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: string) { }
+
+  ngOnInit(): void {
+  }
+
+}
+
