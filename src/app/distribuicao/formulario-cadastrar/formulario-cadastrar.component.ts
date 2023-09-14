@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ListaProcesso } from '../model/lista-processo';
 import { ServicoListarProcessoService } from '../services/servico-listar-processo.service';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrosComponent } from 'src/app/shared/components/erros/erros.component';
+import {catchError} from 'rxjs/operators'
 
 @Component({
   selector: 'app-formulario-cadastrar',

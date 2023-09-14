@@ -14,7 +14,7 @@ export class ServicoListarProcessoService {
 
   listar()
   {
-    return this.HttpClient.get<ListaProcesso[]>(this.API).pipe(delay(15000));
+    return this.HttpClient.get<ListaProcesso[]>(this.API).pipe(delay(3000));
 
   }
 }
