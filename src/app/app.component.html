@@ -1,5 +1,15 @@
-   <mat-toolbar color="primary">
-    <span>Distribuição Geral</span>
+   <mat-toolbar color="primary" class="mat-elevation-z8">
+    <span><mat-icon>eco</mat-icon>Distribuição Geral</span>
+
+    <div class="menuhome" style="flex: 1 1 auto;">
+      <a mat-button routerLinkActive="active" routerLink="home">Home</a>
+      <a mat-button routerLinkActive="active" routerLink="Registar Processo">Registar</a>
+      <a mat-button routerLinkActive="active" routerLink="Distribuir Processo">Destribuir</a>
+      <a mat-button routerLinkActive="active" routerLink="Consultar Processo">Consultar</a>
+      <a  ma-button routerLinkActive="active" routerLink="login">Login|Logout</a>
+
+    </div>
+
   </mat-toolbar>
 
 <router-outlet></router-outlet>

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
+import { AppRotasModule } from './app-rotas/app-rotas.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     AppMaterialModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    AppRotasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
